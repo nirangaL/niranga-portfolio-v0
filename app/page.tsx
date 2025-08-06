@@ -245,26 +245,26 @@ export default function Portfolio() {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="flex gap-6"
             >
-              <Button size="lg" className="text-lg px-8 py-4">
-                <a href="mailto:nirangawh@hotmail.com">
+              <a href="mailto:nirangawh@hotmail.com">
+                <Button size="lg" className="text-lg px-8 py-4">
                   <Mail className="mr-2 h-5 w-5" />
                   Get In Touch
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-lg px-8 py-4 bg-transparent"
+                </Button>
+              </a>
+              <a
+                href="https://github.com/nirangaL"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  href="https://github.com/nirangaL"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 py-4 bg-transparent"
                 >
                   <ArrowDown className="mr-2 h-5 w-5" />
                   View Work
-                </a>
-              </Button>
+                </Button>
+              </a>
             </motion.div>
           </div>
         );
