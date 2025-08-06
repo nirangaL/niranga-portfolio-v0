@@ -199,7 +199,7 @@ export default function Portfolio() {
     switch (section.id) {
       case "hero":
         return (
-          <div className="flex flex-col items-center justify-center min-h-screen text-center px-8 mt-15">
+          <div className="flex flex-col items-center justify-center min-h-screen text-center px-8 mt-20">
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -701,16 +701,32 @@ export default function Portfolio() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSection}
-        className="fixed left-8 top-1/2 transform -translate-y-1/2 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300"
+        className="hidden md:flex fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300"
       >
-        <ChevronLeft className="h-8 w-8 text-gray-700" />
+        <ChevronLeft className="h-6 w-6 text-gray-700" />
       </button>
 
       <button
         onClick={nextSection}
-        className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300"
+        className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300"
       >
-        <ChevronRight className="h-8 w-8 text-gray-700" />
+        <ChevronRight className="h-6 w-6 text-gray-700" />
+      </button>
+
+      {/* Mobile: Bottom center arrows */}
+      <button
+        onClick={prevSection}
+        className="fixed bottom-4 left-4 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300 md:hidden"
+      >
+        <ChevronLeft className="h-6 w-6 text-gray-700" />
+      </button>
+
+      {/* Bottom-right button (mobile only) */}
+      <button
+        onClick={nextSection}
+        className="fixed bottom-4 right-4 z-50 p-4 bg-white/90 backdrop-blur-md rounded-full shadow-lg hover:bg-white transition-all duration-300 md:hidden"
+      >
+        <ChevronRight className="h-6 w-6 text-gray-700" />
       </button>
 
       {/* Main Content */}
